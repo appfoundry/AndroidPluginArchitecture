@@ -1,0 +1,31 @@
+<manifest package="com.siebesysmans.moreadvancedoperations"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service android:name=".MultiplyPlugin">
+            <intent-filter>
+                <action android:name="be.appfoundry.simplecalculator.PLUGIN"/>
+            </intent-filter>
+
+            <meta-data android:name="be.appfoundry.simplecalculator.META_DATA_OPERATION_SYMBOL" android:value="*"/>
+            <meta-data android:name="be.appfoundry.simplecalculator.META_DATA_API_LEVEL" android:value="1"/>
+        </service>
+
+        <service android:name=".DividePlugin">
+            <intent-filter>
+                <action android:name="be.appfoundry.simplecalcalculator.PLUGIN"/>
+            </intent-filter>
+
+            <meta-data android:name="be.appfoundry.simplecalculator.META_DATA_OPERATION_SYMBOL" android:value="/"/>
+            <meta-data android:name="be.appfoundry.simplecalculator.META_DATA_API_LEVEL" android:value="1"/>
+        </service>
+
+    </application>
+
+</manifest>
